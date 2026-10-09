@@ -8,7 +8,7 @@ class User(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String, unique=True, nullable=False)
-    hashed_password = db.Column(db.Binary(80), nullable=False)
+    hashed_password = db.Column(db.LargeBinary(80), nullable=False)
     authenticated = db.Column(db.Boolean, default=False)
     registered_on = db.Column(db.DateTime, nullable=True)
     role = db.Column(db.String, default='user')
