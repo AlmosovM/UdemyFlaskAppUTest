@@ -26,9 +26,10 @@ class Test_Model2(unittest.TestCase):
     @patch('main.models.User')
     def test_get_auth_user_count(self, mock_user):
         mock_user.query.filter_by(authenticated=1).count.return_value = 9981
+    
         count = User.get_auth_user_count()
-        #print (count)
-        self.assertEqual(count, 9989)
+    
+        self.assertEqual(count, 9981)
 
 
 
