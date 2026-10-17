@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
 				echo "Checkout"
-				//git branch: 'main', url: 'https://github.com/kss7/SmartFlaskAPP.git'
+				//git branch: 'master', url: 'https://github.com/AlmosovM/UdemyFlaskAppUTest/blob/master/Jenkinsfile'
 				sh 'ls -l'
             }
         }
